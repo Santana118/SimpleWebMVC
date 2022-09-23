@@ -1,15 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Data.SqlClient;
-using System.Collections.Generic;
 using SimpleWebMVC.Models;
-using System.Linq;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 
 namespace SimpleWebMVC.Controllers
 {
-    
+
 
     public class DivisionController : Controller
 
@@ -63,7 +61,7 @@ namespace SimpleWebMVC.Controllers
             ViewBag.LDivision = Divisions;
             return View();
         }
-        public IActionResult AddDivision(string? id)
+        public IActionResult AddDivision(string id, string _)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -88,12 +86,12 @@ namespace SimpleWebMVC.Controllers
                 {
                     Console.WriteLine(ex);
                     Console.WriteLine("Input tidak valid");
-                    
+
                 }
             }
-            return Ok() ;
+            return Ok();
         }
-        public IActionResult DeleteDivision(int? id)
+        public IActionResult DeleteDivision(int id)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -123,7 +121,7 @@ namespace SimpleWebMVC.Controllers
             }
             return Ok();
         }
-        public IActionResult UpdateDivision(int? id, string? nameDivision)
+        public IActionResult UpdateDivision(int id, string nameDivision)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
