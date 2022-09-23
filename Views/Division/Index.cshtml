@@ -1,0 +1,34 @@
+﻿@using SimpleWebMVC.Models 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Read Division Data</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Division Name</th>
+            <th></th>
+        </tr>
+
+        @foreach (Division item in ViewBag.LDivision)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.DivisionName</td>
+            <td>@Html.ActionLink("Delete", "DeleteDivision", "Division", new { id = item.Id }, null)</td>
+        </tr>
+        }
+    </table>
+
+ 
+
+</body>
+</html>
