@@ -12,4 +12,4 @@ CREATE
 > localhost:{port}/Division/AddDivision/{new_division_name}
 
 UPDATE
-> localhost:{port}/Division/Index/{selected_id_division}/{new_division_name}
+> localhost:{port}/Division/UpdateDivision/{selected_id_division}/{renamed_division_name}
