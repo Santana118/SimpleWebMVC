@@ -2,17 +2,14 @@
 
 USAGE
 
-READ ALL DATA
+READ
 > localhost:{port}/Division/Index
 
-READ ONE DATA
-> localhost:{port}/Division/FindId?Id={id_row}
-
 DELETE
-> localhost:{port}/Division/DeleteDivision?Id={id_row}
+> localhost:{port}/Division/DeleteDivision/{id_division}
 
 CREATE
-> localhost:{port}/Division/AddDivision?DivisionName={new_division_name}
+> localhost:{port}/Division/AddDivision/{new_division_name}
 
 UPDATE
-> localhost:{port}/Division/UpdateDivision?&Id={id_row}&DivisionName={new_division_name}
+> localhost:{port}/Division/UpdateDivision/{selected_id_division}/{renamed_division_name}
